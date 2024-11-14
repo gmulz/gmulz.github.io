@@ -1,10 +1,10 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, Image } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <Flex width="100%" direction="column">
+    <Flex width="100%" direction="row">
+      <Flex direction="column">
+      <Image src="headshot.jpg" maxW="600px" maxH="400px" w="100%" margin="0 auto"/>
       <Text textAlign="justify" fontSize="xl">
       This is Grant Mulitz's website, and I am Grant Mulitz. 
       I'm a comedy writer and software engineer based in New York City.
@@ -19,6 +19,11 @@ export default function Home() {
       I'm also a freelance web developer who has worked on many independent technical projects, 
       including for the viral AI/comedy collective Botnik Studios, and the United Nations.
       </Text>
+      
+      <br /><br />
+      (this website is under construction)
+      </Flex>
+      
     </Flex>
   );
 }
