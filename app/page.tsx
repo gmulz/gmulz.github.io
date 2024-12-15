@@ -2,7 +2,6 @@ import { Flex, Text, Image } from "@chakra-ui/react";
 
 export default function Home() {
   return (
-    <Flex width="100%" direction="row">
       <Flex direction="column">
       <Image src="headshot.jpg" maxW="600px" maxH="400px" w="100%" margin="0 auto"/>
       <Text textAlign="justify" fontSize="xl">
@@ -24,6 +23,5 @@ export default function Home() {
       (this website is under construction)
       </Flex>
       
-    </Flex>
   );
 }

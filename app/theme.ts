@@ -11,6 +11,9 @@ const theme = defineConfig({
         green: {
           value: "#54D27E"
         },
+        grey: {
+          value: "#1d1d1d"
+        }
       },
       fonts: {
         heading: {

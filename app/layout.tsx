@@ -25,7 +25,9 @@ export default function RootLayout({
             m="3rem auto"
             padding="0 2rem">
           <Header />
-          {children}
+          <Flex width="100%" direction="row">
+            {children}
+          </Flex>
           </Flex>
         </ChakraProvider>
         </body>
