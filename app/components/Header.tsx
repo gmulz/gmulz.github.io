@@ -41,6 +41,7 @@ const createMenuItem = (obj: HeaderMenuItem) => {
       backgroundColor="grey"
       color="green"
       padding="2"
+      cursor="pointer"
       asChild
     >
       <a href={`/${obj.value}`}>{obj.title}</a>
