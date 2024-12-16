@@ -55,7 +55,7 @@ export default function Header() {
       align="start"
       w="100%"
       direction="row"
-      marginBottom="5"
+      marginBottom="8"
       justify="space-between"
       alignItems="center"
     >
