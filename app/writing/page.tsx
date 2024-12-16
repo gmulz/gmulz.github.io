@@ -53,6 +53,31 @@ const writingCategories: WritingGridItem[] = [
     caption: "",
     src: "welcometothefuture.jpg",
   },
+  {
+    href: "/writing/pitch",
+    caption: "",
+    src: "pitch-app.jpg",
+  },
+  {
+    href: "/writing/branded-content",
+    caption: "",
+    src: "ucb.jpg",
+  },
+  {
+    href: "/writing/botnik",
+    caption: "",
+    src: "botnik.jpg",
+  },
+  {
+    href: "/writing/defunct-websites",
+    caption: "",
+    src: "n4d.jpeg",
+  },
+  {
+    href: "/writing/cornell",
+    caption: "",
+    src: "cornell.png",
+  },
 ];
 
 export default function Writing() {
