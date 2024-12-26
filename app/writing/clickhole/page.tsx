@@ -8,47 +8,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-type Headline = {
-  headline: string;
-  href: string;
-};
-
-type Shareable = {
-  src: string;
-  href: string;
-};
-
-const createHeadline = (obj: Headline) => {
-  return (
-    <Link
-      href={obj.href}
-      textDecoration="underline"
-      color="green"
-      fontSize="larger"
-      marginBottom="4"
-      target="_blank"
-    >
-      {obj.headline}
-    </Link>
-  );
-};
-
-const createShareable = (obj: Shareable) => {
-  return (
-    <GridItem
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      padding="2"
-    >
-      <Flex height="100%">
-        <Link href={obj.href} target="_blank">
-          <Image src={obj.src} />
-        </Link>
-      </Flex>
-    </GridItem>
-  );
-};
+import { Headline, Shareable, createHeadline, createShareable } from "../utils";
 
 const headlines: Headline[] = [
   {

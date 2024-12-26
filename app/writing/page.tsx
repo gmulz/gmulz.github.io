@@ -39,12 +39,12 @@ const writingCategories: WritingGridItem[] = [
     src: "clickhole.png",
   },
   {
-    href: "/writing/harddrive",
+    href: "/writing/hard-drive",
     caption: "",
     src: "harddrive.png",
   },
   {
-    href: "/writing/funnyordie",
+    href: "/writing/funny-or-die",
     caption: "",
     src: "funnyordie.png",
   },
