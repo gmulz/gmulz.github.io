@@ -35,47 +35,47 @@ const createGridItem = (obj: WritingGridItem) => {
 const writingCategories: WritingGridItem[] = [
   {
     href: "/writing/clickhole",
-    caption: "",
+    caption: "ClickHole",
     src: "clickhole.png",
   },
   {
     href: "/writing/hard-drive",
-    caption: "",
+    caption: "Hard Drive",
     src: "harddrive.png",
   },
   {
     href: "/writing/funny-or-die",
-    caption: "",
+    caption: "Funny Or Die",
     src: "funnyordie.png",
   },
   {
     href: "/writing/books",
-    caption: "",
+    caption: "Books",
     src: "welcometothefuture.jpg",
   },
   {
     href: "/writing/pitch",
-    caption: "",
+    caption: "Pitch",
     src: "pitch-app.jpg",
   },
   {
     href: "/writing/branded-content",
-    caption: "",
+    caption: "Branded Content",
     src: "ucb.jpg",
   },
   {
     href: "/writing/botnik",
-    caption: "",
+    caption: "Botnik",
     src: "botnik.jpg",
   },
   {
     href: "/writing/defunct-websites",
-    caption: "",
+    caption: "Defunct Websites",
     src: "n4d.jpeg",
   },
   {
     href: "/writing/cornell",
-    caption: "",
+    caption: "Cornell University",
     src: "cornell.png",
   },
 ];
