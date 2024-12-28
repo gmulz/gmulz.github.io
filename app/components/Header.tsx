@@ -17,8 +17,8 @@ type HeaderMenuItem = {
 
 const menuItems: HeaderMenuItem[] = [
   {
-    title: "About",
-    value: "about",
+    title: "Contact",
+    value: "contact",
   },
   {
     title: "Writing",
@@ -30,7 +30,7 @@ const menuItems: HeaderMenuItem[] = [
   },
   {
     title: "Software Engineering",
-    value: "tech",
+    value: "software-engineering",
   },
 ];
 
