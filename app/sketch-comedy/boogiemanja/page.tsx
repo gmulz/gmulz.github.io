@@ -9,10 +9,10 @@ const auntColony: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/j4JVJOpDDqc?si=QdskqDe0js9kYZSj"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -25,10 +25,10 @@ const pointlessAppliance: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/X2TH3e9dFGM?si=Gr4-vzjA6gn0YDuz"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -39,10 +39,10 @@ const pointlessAppliance: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/WXqiBQr2Tb4?si=Hk2LjVsOZ5f7hgoz"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -53,10 +53,10 @@ const pointlessAppliance: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/VoP1Tz0UZcU?si=uu87u5H3__lp3bWl"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -67,10 +67,10 @@ const pointlessAppliance: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/qiRO8OjwWBY?si=d4mCl5pooCS0qU5c"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -81,10 +81,10 @@ const pointlessAppliance: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/4SHU_aTeMks?si=gzUKr4ppd64utlO8"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -95,10 +95,10 @@ const pointlessAppliance: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/r1v1VC8APdI?si=3-SYshmqMj6yFj0K"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -112,10 +112,10 @@ const boldLip: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/Wj-peHQfduY?si=2mHQBxlJpkjYYWdP"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -126,10 +126,10 @@ const boldLip: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/zwCaIW07Dcw?si=kDkJkXmAnrVfIWEy"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -140,10 +140,10 @@ const boldLip: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/42nRc-9PpeY?si=M2PV9vijt8gf0pza"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -154,10 +154,10 @@ const boldLip: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/M-nPHVYpUb4?si=yaK8uSY1IPuC_iic"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -168,10 +168,10 @@ const boldLip: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/CqC0HoU8FGA?si=vTlz2Yjr--bzp6lz"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
@@ -182,10 +182,10 @@ const boldLip: GridVideo[] = [
         height="315"
         src="https://www.youtube.com/embed/fcxQWZvSm_o?si=su2F1MwZ3dyxq2BP"
         title="YouTube video player"
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
       ></iframe>
     ),
   },
