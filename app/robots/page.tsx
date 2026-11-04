@@ -23,7 +23,11 @@ export default function SoftwareEngineering() {
         This project won Viam's first internal hackathon, and other hackathons
         as Build on Viam continued
       </Text>
-      <video controls src="/af31b61410d9b743e17d05e58fb005ee.MP4"></video>
+      <video
+        controls
+        src="/af31b61410d9b743e17d05e58fb005ee.MP4"
+        width="480"
+      ></video>
 
       <Heading size="2xl">Rosie the Flower Girl Robot</Heading>
       <Text>
@@ -32,7 +36,7 @@ export default function SoftwareEngineering() {
         a bucket and drops flower petals. This debuted at my friend's wedding as
         her actual flower girl!
       </Text>
-      <video controls src="/IMG_8203.MOV"></video>
+      <video controls src="/IMG_8203.MOV" width="480"></video>
 
       <Heading size="2xl">Driveway Gate</Heading>
       <Text>
@@ -41,7 +45,7 @@ export default function SoftwareEngineering() {
         boxes, and an app to control it from your phone. Waterproofing was the
         real challenge with this one
       </Text>
-      <video controls src="/IMG_2491.mov"></video>
+      <video controls src="/IMG_2491.mov" width="480"></video>
     </Flex>
   );
 }
