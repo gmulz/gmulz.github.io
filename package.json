@@ -2,30 +2,33 @@
   "name": "gmulz-personal-page",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=26"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "chakra-snippet": "chakra-cli snippet add"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.1.1",
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "framer-motion": "^11.11.11",
-    "next": "^14.2.35",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^5.4.0"
+    "@chakra-ui/react": "^3.38.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "framer-motion": "^14.9.1",
+    "next": "^16.4.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^3.1.1",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@chakra-ui/cli": "^3.38.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.0",
     "eslint-config-next": "^16.4.5",
-    "typescript": "^5"
+    "typescript": "^6.0.3"
   }
 }
