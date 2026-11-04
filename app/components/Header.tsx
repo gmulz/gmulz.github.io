@@ -20,7 +20,7 @@ const menuItems: HeaderMenuItem[] = [
     title: "Software Engineering",
     value: "software-engineering",
   },
-
+  { title: "Robots", value: "robots" },
   {
     title: "Writing",
     value: "writing",
