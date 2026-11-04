@@ -17,9 +17,10 @@ type HeaderMenuItem = {
 
 const menuItems: HeaderMenuItem[] = [
   {
-    title: "Contact",
-    value: "contact",
+    title: "Software Engineering",
+    value: "software-engineering",
   },
+
   {
     title: "Writing",
     value: "writing",
@@ -29,8 +30,8 @@ const menuItems: HeaderMenuItem[] = [
     value: "sketch-comedy",
   },
   {
-    title: "Software Engineering",
-    value: "software-engineering",
+    title: "Contact",
+    value: "contact",
   },
 ];
 
@@ -65,7 +66,7 @@ export default function Header() {
             Grant Mulitz
           </Heading>
           <Text color="green" fontFamily="subHeading">
-            Comedy Writer &#8756; Engineer &#8756; Nerd
+            Engineer &#8756; Comedy Writer &#8756; Nerd
           </Text>
         </Flex>
       </a>
