@@ -1,14 +1,9 @@
-import {
-  Flex,
-  Heading,
-  Text,
-  Grid,
-  GridItem,
-  Link,
-  Image,
-} from "@chakra-ui/react";
+import type { Metadata } from "next";
+import { Headline, Shareable, WRITING_CRUMBS } from "../utils";
+import { Text } from "@chakra-ui/react";
+import { HeadlineList, ImageGrid, PageHeader, Section, WithSidebar } from "../../components/Page";
 
-import { Headline, Shareable, createHeadline, createShareable } from "../utils";
+export const metadata: Metadata = { title: "ClickHole" };
 
 const headlines: Headline[] = [
   {
@@ -109,44 +104,30 @@ const shareables: Shareable[] = [
 
 export default function ClickHole() {
   return (
-    <Flex direction="column">
-      <Heading size="5xl" color="green">
-        ClickHole
-      </Heading>
-      <Text>
-        I've been a headline contributor to ClickHole since 2021. I've written
-        and submitted literally thousands of headlines, social media content,
-        and celebrity quotes weekly, a small subset of which has made it to
-        publication.
-      </Text>
-      <Grid templateColumns="repeat(3, 1fr)">
-        <GridItem colSpan={1} padding="4">
-          <Image src="/sex-ed.png" />
-          <br />
-          <Image src="/gecko-boy.png" />
-          <br />
-          <Image src="/toaster_tart.png" />
-        </GridItem>
-        <GridItem colSpan={2}>
-          <Heading size="3xl" color="green">
-            Headlines
-          </Heading>
-          {headlines.map(createHeadline)}
-        </GridItem>
-      </Grid>
-      <Heading size="3xl" color="green">
-        They Said What?!
-      </Heading>
-      <Grid templateColumns={"repeat(3, 2fr)"}>
-        {TSWs.map(createShareable)}
-      </Grid>
-
-      <Heading size="3xl" color="green">
-        Shareables
-      </Heading>
-      <Grid templateColumns={"repeat(3, 2fr)"}>
-        {shareables.map(createShareable)}
-      </Grid>
-    </Flex>
+    <>
+      <PageHeader
+        title="ClickHole"
+        crumbs={WRITING_CRUMBS}
+        intro={
+          <Text>
+            I&apos;ve been a headline contributor to ClickHole since 2021.
+            I&apos;ve written and submitted literally thousands of headlines,
+            social media content, and celebrity quotes weekly, a small subset of
+            which has made it to publication.
+          </Text>
+        }
+      />
+      <Section title="Headlines">
+        <WithSidebar images={["/sex-ed.png", "/gecko-boy.png", "/toaster_tart.png"]}>
+          <HeadlineList items={headlines} />
+        </WithSidebar>
+      </Section>
+      <Section title="They Said What?!">
+        <ImageGrid items={TSWs} />
+      </Section>
+      <Section title="Shareables">
+        <ImageGrid items={shareables} />
+      </Section>
+    </>
   );
 }

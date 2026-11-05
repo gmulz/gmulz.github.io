@@ -1,13 +1,9 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import { createHeadline, Headline } from "../utils";
+import type { Metadata } from "next";
+import { Headline, WRITING_CRUMBS } from "../utils";
+import { Text } from "@chakra-ui/react";
+import { HeadlineList, PageHeader, Section } from "../../components/Page";
 
-/* 
-chatgpt prompt for headline extraction:
-
-I'm going to give you a list of HTML <li> elements, each containing a link <a> element. I need you to reformat these as a JSON array, where the JSON objects in the array have two properties: "headline" which is the text content of the <li> element, and "href" which is the href property of the link.
-
-here is the list of elements:
-*/
+export const metadata: Metadata = { title: "Cornell University" };
 
 const cuNooz: Headline[] = [
   {
@@ -82,39 +78,50 @@ const lunatic: Headline[] = [
 ];
 export default function Cornell() {
   return (
-    <Flex direction="column">
-      <Heading size="5xl" color="green">
-        Cornell University
-      </Heading>
-      <Text>
-        As an undergraduate, I wrote comedy at Cornell from my freshman year
-        onward. I was on the founding team of Cornell's satire newspaper, CU
-        Nooz, and served as its editor in chief my junior and senior years. I
-        also occasionally wrote longer form humor for Cornell's humor newspaper,
-        The Cornell Lunatic
-      </Text>
-      <Heading size="3xl" color="green">
-        CU Nooz
-      </Heading>
-      <Text>
-        CU Nooz is Cornell University's online Onion-style satire newspaper. I
-        joined the founding staff as their only freshman writer in 2013, and
-        served as Editor-in-Chief for three semesters from 2015-2016. During my
-        tenure as EiC, I grew the site's readership and staff, helped define its
-        voice and tone, and oversaw the creation of a second satire website, CU
-        Noozfeed, a ClickHole-style site satirizing campus buzz/clickbait
-        articles in the style of Buzzfeed and Upworthy. Here are a few of the
-        many articles I wrote over the years:
-      </Text>
-      {cuNooz.map(createHeadline)}
-      <Heading size="3xl" color="green">
-        The Cornell Lunatic
-      </Heading>
-      <Text>
-        The Cornell Lunatic is Cornell's print humor magazine publishing short
-        prose. I wrote several pieces for them during my time in college.
-      </Text>
-      {lunatic.map(createHeadline)}
-    </Flex>
+    <>
+      <PageHeader
+        title="Cornell University"
+        crumbs={WRITING_CRUMBS}
+        intro={
+          <Text>
+            As an undergraduate, I wrote comedy at Cornell from my freshman year
+            onward. I was on the founding team of Cornell&apos;s satire
+            newspaper, CU Nooz, and served as its editor in chief my junior and
+            senior years. I also occasionally wrote longer form humor for
+            Cornell&apos;s humor newspaper, The Cornell Lunatic.
+          </Text>
+        }
+      />
+      <Section
+        title="CU Nooz"
+        intro={
+          <Text>
+            CU Nooz is Cornell University&apos;s online Onion-style satire
+            newspaper. I joined the founding staff as their only freshman writer
+            in 2013, and served as Editor-in-Chief for three semesters from
+            2015-2016. During my tenure as EiC, I grew the site&apos;s
+            readership and staff, helped define its voice and tone, and oversaw
+            the creation of a second satire website, CU Noozfeed, a
+            ClickHole-style site satirizing campus buzz/clickbait articles in
+            the style of Buzzfeed and Upworthy. Here are a few of the many
+            articles I wrote over the years:
+          </Text>
+        }
+      >
+        <HeadlineList items={cuNooz} />
+      </Section>
+      <Section
+        title="The Cornell Lunatic"
+        intro={
+          <Text>
+            The Cornell Lunatic is Cornell&apos;s print humor magazine
+            publishing short prose. I wrote several pieces for them during my
+            time in college.
+          </Text>
+        }
+      >
+        <HeadlineList items={lunatic} />
+      </Section>
+    </>
   );
 }

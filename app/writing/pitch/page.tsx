@@ -1,5 +1,9 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import { createHeadline, Headline } from "../utils";
+import type { Metadata } from "next";
+import { Headline, WRITING_CRUMBS } from "../utils";
+import { Text } from "@chakra-ui/react";
+import { HeadlineList, PageHeader, Section } from "../../components/Page";
+
+export const metadata: Metadata = { title: "Pitch" };
 
 const headlines: Headline[] = [
   {
@@ -34,24 +38,29 @@ const headlines: Headline[] = [
 
 export default function Pitch() {
   return (
-    <Flex direction="column">
-      <Heading size="5xl" color="green">
-        Pitch
-      </Heading>
-      <Text>
-        I was a long time contributor to the now-defunct online comedy writing
-        app Pitch, founded by Matt Klinman at Funny Or Die. I ranked
-        consistently in the top 25 comedians for jokes pitched, bought, and
-        published through the app. My jokes appeared on the Pitch social media
-        channels, and a host of other clients that used pitch to connect with
-        comedy writers. I got to work on special projects for advertising
-        agencies, brands, tech companies and even political campaigns.
-      </Text>
-      <Text>
-        Here are a few public jokes of mine that made it onto the Pitch social
-        channels
-      </Text>
-      {headlines.map(createHeadline)}
-    </Flex>
+    <>
+      <PageHeader
+        title="Pitch"
+        crumbs={WRITING_CRUMBS}
+        intro={
+          <Text>
+            I was a long time contributor to the now-defunct online comedy
+            writing app Pitch, founded by Matt Klinman at Funny Or Die. I ranked
+            consistently in the top 25 comedians for jokes pitched, bought, and
+            published through the app. My jokes appeared on the Pitch social
+            media channels, and a host of other clients that used pitch to
+            connect with comedy writers. I got to work on special projects for
+            advertising agencies, brands, tech companies and even political
+            campaigns.
+          </Text>
+        }
+      />
+      <Section
+        title="Jokes"
+        intro={<Text>Here are a few public jokes of mine that made it onto the Pitch social channels.</Text>}
+      >
+        <HeadlineList items={headlines} />
+      </Section>
+    </>
   );
 }

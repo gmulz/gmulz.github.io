@@ -1,5 +1,9 @@
-import { Flex, Grid, Heading, Text } from "@chakra-ui/react";
-import { createHeadline, createShareable, Headline, Shareable } from "../utils";
+import type { Metadata } from "next";
+import { Headline, Shareable, WRITING_CRUMBS } from "../utils";
+import { Text } from "@chakra-ui/react";
+import { HeadlineList, ImageGrid, PageHeader, Section } from "../../components/Page";
+
+export const metadata: Metadata = { title: "Funny Or Die" };
 
 const headlines: Headline[] = [
   {
@@ -184,27 +188,32 @@ const shareables: Shareable[] = [
 
 export default function FunnyOrDie() {
   return (
-    <Flex direction="column">
-      <Heading size="5xl" color="green">
-        Funny Or Die
-      </Heading>
-      <Text>
-        I was a freelance contributor to Funny Or Die. I sold jokes to FOD which
-        appeared in online articles (mainly listicles) and on their social media
-        channels. Believe it or not, Funny Or Die used to publish written
-        content on their website before they got rid of their editorial
-        department and focused solely on video and TV.
-      </Text>
-      <Text>
-        Here are some contributions I made for those written pieces. The links
-        are mostly broken or no longer on the website, but there are a few
-        tumblr and social posts that still reference them, just to prove they
-        once existed...
-      </Text>
-      {headlines.map(createHeadline)}
-      <Grid templateColumns={"repeat(3, 2fr)"}>
-        {shareables.map(createShareable)}
-      </Grid>
-    </Flex>
+    <>
+      <PageHeader
+        title="Funny Or Die"
+        crumbs={WRITING_CRUMBS}
+        intro={
+          <>
+            <Text>
+              I was a freelance contributor to Funny Or Die. I sold jokes to FOD
+              which appeared in online articles (mainly listicles) and on their
+              social media channels. Believe it or not, Funny Or Die used to
+              publish written content on their website before they got rid of
+              their editorial department and focused solely on video and TV.
+            </Text>
+            <Text>
+              Here are some contributions I made for those written pieces. The
+              links are mostly broken or no longer on the website, but there are
+              a few tumblr and social posts that still reference them, just to
+              prove they once existed...
+            </Text>
+          </>
+        }
+      />
+      <HeadlineList items={headlines} />
+      <Section title="Shareables">
+        <ImageGrid items={shareables} />
+      </Section>
+    </>
   );
 }

@@ -1,13 +1,9 @@
-import {
-  Flex,
-  Heading,
-  Text,
-  Link,
-  GridItem,
-  Grid,
-  Image,
-} from "@chakra-ui/react";
-import { createHeadline, Headline } from "../utils";
+import type { Metadata } from "next";
+import { Headline, WRITING_CRUMBS } from "../utils";
+import { Link, Text } from "@chakra-ui/react";
+import { HeadlineList, PageHeader, WithSidebar } from "../../components/Page";
+
+export const metadata: Metadata = { title: "Hard Drive" };
 
 const headlines: Headline[] = [
   {
@@ -116,31 +112,27 @@ const headlines: Headline[] = [
 
 export default function HardDrive() {
   return (
-    <Flex direction="column">
-      <Heading size="5xl" color="green">
-        Hard Drive
-      </Heading>
-      <Text>
-        I was a{" "}
-        <Link color="green" href="https://hard-drive.net/author/grant-mulitz/">
-          contributor
-        </Link>
-        , to Hard Drive, a video game and nerd culture website that's a spinoff
-        of The Hard Times. I participated in Hard Drive's "featured contributor"
-        program committing to ten headlines per week for four weeks, during
-        which I had over a dozen articles published on the site.
-      </Text>
-      <Grid templateColumns="repeat(3, 1fr)">
-        <GridItem colSpan={1} padding="4">
-          <Image src="/star-wars-easter-egg.png" />
-          <br />
-          <Image src="/doom-guy.png" />
-          <br />
-          <Image src="/placebo-game.png" />
-          <br />
-        </GridItem>
-        <GridItem colSpan={2}>{headlines.map(createHeadline)}</GridItem>
-      </Grid>
-    </Flex>
+    <>
+      <PageHeader
+        title="Hard Drive"
+        crumbs={WRITING_CRUMBS}
+        intro={
+          <Text>
+            I was a{" "}
+            <Link href="https://hard-drive.net/author/grant-mulitz/" target="_blank">
+              contributor
+            </Link>{" "}
+            to Hard Drive, a video game and nerd culture website that&apos;s a
+            spinoff of The Hard Times. I participated in Hard Drive&apos;s
+            &quot;featured contributor&quot; program committing to ten
+            headlines per week for four weeks, during which I had over a dozen
+            articles published on the site.
+          </Text>
+        }
+      />
+      <WithSidebar images={["/star-wars-easter-egg.png", "/doom-guy.png", "/placebo-game.png"]}>
+        <HeadlineList items={headlines} />
+      </WithSidebar>
+    </>
   );
 }

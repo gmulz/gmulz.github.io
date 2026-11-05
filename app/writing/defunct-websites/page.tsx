@@ -1,5 +1,9 @@
-import { Flex, Heading, Text, Link } from "@chakra-ui/react";
-import { createHeadline, Headline } from "../utils";
+import type { Metadata } from "next";
+import { Headline, WRITING_CRUMBS } from "../utils";
+import { Link, Text } from "@chakra-ui/react";
+import { HeadlineList, PageHeader, Section } from "../../components/Page";
+
+export const metadata: Metadata = { title: "Defunct Comedy Websites" };
 
 const blaffo: Headline[] = [
   {
@@ -65,62 +69,76 @@ const timsTesseract: Headline[] = [
 
 export default function DefunctWebsites() {
   return (
-    <Flex direction="column">
-      <Heading size="5xl" color="green">
-        Defunct Comedy Websites
-      </Heading>
-      <Text>
-        Over the many years, I've written for small indie websites, satire rags
-        and 'zines. Many of these are now defunct, their domain names long since
-        expired, and their jokes vaporized.
-      </Text>
-      <Text>
-        Still, I like keeping an excruciatingly detailed list of everything I've
-        written that's ever been published.
-      </Text>
-
-      <Heading size="3xl" color="green">
-        Blaffo
-      </Heading>
-      <Text>
-        Blaffo was a satire website with a somewhat apocalyptic theme. It was
-        founded by Scott Dikkers, better known as the founder of The Onion. I
-        was an early contributor to the site, but the project was very
-        short-lived
-      </Text>
-      {blaffo.map(createHeadline)}
-
-      <Heading size="3xl" color="green">
-        News For Dogs
-      </Heading>
-      <Text>
-        Exactly what it sounds like. A satire news website focused on dogs. The
-        website is no more, but these used to be full articles, not just
-        headlines
-      </Text>
-      {newsForDogs.map(createHeadline)}
-
-      <Heading size="3xl" color="green">
-        Go List Yourself
-      </Heading>
-      <Text>
-        <Link href="https://www.instagram.com/golistyourself/" color="green">
-          Go List Yourself
-        </Link>{" "}
-        was a small website satirizing millennial culture and the "buzz" news
-        trends of the mid-2010s.
-      </Text>
-      {goListYourself.map(createHeadline)}
-
-      <Heading size="3xl" color="green">
-        Tim's Tesseract
-      </Heading>
-      <Text>
-        Tim's Tesseract was a sci-fi/horror comedy website. I wrote a monthly
-        Star Trek-themed column titled Ensign's Log, the journal entries of a
-        lowly ensign aboard the U.S.S. Enterprise NCC-1701-D.
-      </Text>
-      {timsTesseract.map(createHeadline)}
-    </Flex>
+    <>
+      <PageHeader
+        title="Defunct Comedy Websites"
+        crumbs={WRITING_CRUMBS}
+        intro={
+          <>
+            <Text>
+              Over the many years, I&apos;ve written for small indie websites,
+              satire rags and &apos;zines. Many of these are now defunct, their
+              domain names long since expired, and their jokes vaporized.
+            </Text>
+            <Text>
+              Still, I like keeping an excruciatingly detailed list of
+              everything I&apos;ve written that&apos;s ever been published.
+            </Text>
+          </>
+        }
+      />
+      <Section
+        title="Blaffo"
+        intro={
+          <Text>
+            Blaffo was a satire website with a somewhat apocalyptic theme. It
+            was founded by Scott Dikkers, better known as the founder of The
+            Onion. I was an early contributor to the site, but the project was
+            very short-lived.
+          </Text>
+        }
+      >
+        <HeadlineList items={blaffo} />
+      </Section>
+      <Section
+        title="News For Dogs"
+        intro={
+          <Text>
+            Exactly what it sounds like. A satire news website focused on dogs.
+            The website is no more, but these used to be full articles, not just
+            headlines.
+          </Text>
+        }
+      >
+        <HeadlineList items={newsForDogs} />
+      </Section>
+      <Section
+        title="Go List Yourself"
+        intro={
+          <Text>
+            <Link href="https://www.instagram.com/golistyourself/" target="_blank">
+              Go List Yourself
+            </Link>{" "}
+            was a small website satirizing millennial culture and the
+            &quot;buzz&quot; news trends of the mid-2010s.
+          </Text>
+        }
+      >
+        <HeadlineList items={goListYourself} />
+      </Section>
+      <Section
+        title="Tim's Tesseract"
+        intro={
+          <Text>
+            Tim&apos;s Tesseract was a sci-fi/horror comedy website. I wrote a
+            monthly Star Trek-themed column titled Ensign&apos;s Log, the
+            journal entries of a lowly ensign aboard the U.S.S. Enterprise
+            NCC-1701-D.
+          </Text>
+        }
+      >
+        <HeadlineList items={timsTesseract} />
+      </Section>
+    </>
   );
 }

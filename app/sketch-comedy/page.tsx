@@ -1,30 +1,32 @@
-import { Flex, Grid, Heading, Text } from "@chakra-ui/react";
-import { createGridItem, GridMenuItem } from "../utils";
+import type { Metadata } from "next";
+import { Text } from "@chakra-ui/react";
+import { PageHeader, Tile, TileGrid } from "../components/Page";
 
-const items: GridMenuItem[] = [
+export const metadata: Metadata = { title: "Sketch Comedy" };
+
+const items: Tile[] = [
   {
     href: "/sketch-comedy/boogiemanja",
     src: "/boogie.png",
     caption: "BoogieManja",
+    blurb: "NYC sketch collective at the PIT",
   },
-  // {
-  //   href: "/sketch-comedy/indie",
-  //   src: ""
-  // }
 ];
 
 export default function SketchComedy() {
   return (
-    <Flex direction="column">
-      <Heading size={"5xl"} color={"green"}>
-        Sketch Comedy
-      </Heading>
-      <Text>
-        I write digital and live sketch comedy, which has been viewed and
-        performed all over New York City and at sketch comedy festivals across
-        North America
-      </Text>
-      <Grid templateColumns="repeat(3, 1fr)">{items.map(createGridItem)}</Grid>
-    </Flex>
+    <>
+      <PageHeader
+        title="Sketch Comedy"
+        intro={
+          <Text>
+            I write digital and live sketch comedy, which has been viewed and
+            performed all over New York City and at sketch comedy festivals
+            across North America.
+          </Text>
+        }
+      />
+      <TileGrid items={items} />
+    </>
   );
 }

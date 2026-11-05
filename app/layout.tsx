@@ -1,12 +1,20 @@
-'use client'
 import "./globals.css";
 
+import type { Metadata } from "next";
+import { Box, Flex } from "@chakra-ui/react";
 
-import { ChakraProvider,  Flex } from "@chakra-ui/react";
-
-import theme from './theme'
+import Providers from "./providers";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
+export const metadata: Metadata = {
+  title: {
+    default: "Grant Mulitz",
+    template: "%s · Grant Mulitz",
+  },
+  description:
+    "Grant Mulitz is a software engineer, robot builder, and comedy writer based in New York City.",
+};
 
 export default function RootLayout({
   children,
@@ -14,24 +22,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
-      <html lang="en" suppressHydrationWarning>
-        <body>
-        <ChakraProvider value={theme}>
-          <Flex 
-            direction="column" 
-            align="center" 
-            maxW={{ xl: "1200px"}} 
-            m="3rem auto"
-            padding="0 2rem">
-          <Header />
-          <Flex width="100%" direction="row">
-            {children}
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Providers>
+          <Flex
+            direction="column"
+            minH="100vh"
+            maxW="1100px"
+            mx="auto"
+            px={{ base: "5", md: "8" }}
+          >
+            <Header />
+            <Box as="main" flex="1" w="100%" py={{ base: "8", md: "12" }}>
+              {children}
+            </Box>
+            <Footer />
           </Flex>
-          </Flex>
-        </ChakraProvider>
-        </body>
-      </html>
-    
+        </Providers>
+      </body>
+    </html>
   );
 }

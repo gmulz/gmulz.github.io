@@ -1,5 +1,9 @@
-import { Flex, Text, Heading, Grid, Link } from "@chakra-ui/react";
-import { createHeadline, createShareable, Headline, Shareable } from "../utils";
+import type { Metadata } from "next";
+import { Headline, Shareable, WRITING_CRUMBS } from "../utils";
+import { Link, Text } from "@chakra-ui/react";
+import { HeadlineList, ImageGrid, PageHeader, Section } from "../../components/Page";
+
+export const metadata: Metadata = { title: "Branded Content" };
 
 const meh: Headline[] = [
   {
@@ -34,35 +38,43 @@ const ucb: Shareable[] = [
 
 export default function BrandedContent() {
   return (
-    <Flex direction="column">
-      <Heading size="5xl" color="green">
-        Branded Content
-      </Heading>
-      <Text>
-        I've had the opportunity to "ghost-write" a few memes and jokes for a
-        few outlets. As the statute of limitations has long passed, I'll claim a
-        few of those here:
-      </Text>
-      <Heading size="3xl" color="green">
-        {" "}
-        Meh.com
-      </Heading>
-      <Text>
-        I've sold jokes to daily deals website{" "}
-        <Link href="http://meh.com" target="_blank" color="green">
-          meh.com
-        </Link>
-        , which have appeared in their sales copy and on social media feeds.
-      </Text>
-      {meh.map(createHeadline)}
-      <Heading size="3xl" color="green">
-        UCB Comedy
-      </Heading>
-      <Text>
-        (UCB wiped these from their Instagram after they were restructured in
-        2020. Why they wouldn't want to keep these gems is beyond me)
-      </Text>
-      <Grid templateColumns={"repeat(3, 1fr)"}>{ucb.map(createShareable)}</Grid>
-    </Flex>
+    <>
+      <PageHeader
+        title="Branded Content"
+        crumbs={WRITING_CRUMBS}
+        intro={
+          <Text>
+            I&apos;ve had the opportunity to &quot;ghost-write&quot; a few memes
+            and jokes for a few outlets. As the statute of limitations has long
+            passed, I&apos;ll claim a few of those here:
+          </Text>
+        }
+      />
+      <Section
+        title="Meh.com"
+        intro={
+          <Text>
+            I&apos;ve sold jokes to daily deals website{" "}
+            <Link href="http://meh.com" target="_blank">
+              meh.com
+            </Link>
+            , which have appeared in their sales copy and on social media feeds.
+          </Text>
+        }
+      >
+        <HeadlineList items={meh} />
+      </Section>
+      <Section
+        title="UCB Comedy"
+        intro={
+          <Text>
+            (UCB wiped these from their Instagram after they were restructured
+            in 2020. Why they wouldn&apos;t want to keep these gems is beyond me)
+          </Text>
+        }
+      >
+        <ImageGrid items={ucb} />
+      </Section>
+    </>
   );
 }
